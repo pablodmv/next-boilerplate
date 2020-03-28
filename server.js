@@ -19,6 +19,10 @@ app.prepare().then(() => {
   server.use(bodyParser.urlencoded({ extended: false }));
   server.use(cookieParser());
 
+  server.get("/", (req, res) => {
+    return app.render(req, res, "/home");
+  });
+
   server.get("*", (req, res) => {
     return handle(req, res);
   });
