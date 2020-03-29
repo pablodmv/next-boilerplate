@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default () => (
   <Head>
-    <title>CourseIt Boilerplate</title>
+    <title>Next Boilerplate</title>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
