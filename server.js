@@ -1,6 +1,6 @@
 const express = require("express");
 const next = require("next");
-
+require("dotenv").config();
 const compression = require("compression");
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV === "dev";
@@ -27,7 +27,7 @@ app.prepare().then(() => {
     return handle(req, res);
   });
 
-  server.listen(port, err => {
+  server.listen(port, (err) => {
     if (err) throw err;
     console.log(`> Ready on http://localhost:${port}`);
   });
